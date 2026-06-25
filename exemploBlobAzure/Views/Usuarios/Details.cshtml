@@ -1,0 +1,43 @@
+﻿@model exemploBlobAzure.Models.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UsuarioNome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UsuarioNome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UsuarioImageUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UsuarioImageUrl)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UsuarioImageUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @if (!string.IsNullOrEmpty(Model.UsuarioImageUrl))
+            {
+                <img src="@Model.UsuarioImageUrl" width="120" alt="Usuario Image" />
+            }
+            else
+            {
+                <span>No image</span>
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-UsuarioID="@Model?.UsuarioID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

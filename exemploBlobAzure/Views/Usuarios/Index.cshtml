@@ -1,0 +1,55 @@
+﻿@model IEnumerable<exemploBlobAzure.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<h1>Usuarios</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Usuario ID</th>
+            <th>Usuario Nome</th>
+            <th>Image URL</th>
+            <th>Image</th>
+            <th>Edit</th>
+            <th>View</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.UsuarioID</td>
+                <td>@item.UsuarioNome</td>
+                <td>@item.UsuarioImageUrl</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.UsuarioImageUrl))
+                    {
+                        <img src="@item.UsuarioImageUrl" width="120" />
+                    }
+                    else
+                    {
+                        <span>No image</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-outline-primary" asp-route-UsuarioID="@item.UsuarioID"><i class="fa-solid fa-pencil"></i> Edit</a>
+                </td>
+                <td>
+                    <a asp-action="Details" class="btn btn-outline-info" asp-route-UsuarioID="@item.UsuarioID"><i class="fa-solid fa-bullseye"></i> Details</a>
+                </td>
+                <td>
+                    <a asp-action="Delete" class="btn btn-outline-danger" asp-route-UsuarioID="@item.UsuarioID"><i class="fa-solid fa-trash"></i> Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

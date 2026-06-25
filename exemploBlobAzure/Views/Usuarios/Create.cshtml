@@ -1,0 +1,35 @@
+﻿@model exemploBlobAzure.Models.Usuario
+
+@{
+    ViewData["Title"] = "Create Usuario";
+}
+
+<h1>Create Usuario</h1>
+@* Critical for the data to get into the blobservice as a file *@
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group mb-3">
+        <label asp-for="UsuarioNome" class="control-label"></label>
+        <input asp-for="UsuarioNome" class="form-control" />
+        <span asp-validation-for="UsuarioNome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="control-label">Upload Image</label>
+        <input type="file" name="imageFile" class="form-control" accept="image/*" />
+    </div>
+
+    <div class="form-group mb-3">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
