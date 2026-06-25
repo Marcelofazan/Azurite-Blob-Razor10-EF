@@ -7,16 +7,13 @@ Exemplo de armazenamento Blob Storage com Emulador Azurite em C# ASP.NET Core 10
 #### 📋 O que você vai encontrar neste projeto
 | Tecnologia | Descrição |
 |-----------|-----------|
-| **Dicionário de Dados** | Armazenamento de coleções de pares (chave-valor), permitindo busca e recuperação de dados |
 | **Blob Storage** | Armazenamento de objetos em nuvem da Microsoft, projetado para guardar imagens, vídeos, documentos |
 
 #### 💬 Requisitos do Projeto
 - Necessário Emulador Azurite instalado
 - Realizar Migrations EntityFramework .NET
 
-
 #### 🔄 Executar a aplicação
-
 - No Gerenciador de pacotes Nuget do Visual Studio executar  
 
 ```bash 
