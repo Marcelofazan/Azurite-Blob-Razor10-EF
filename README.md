@@ -1,5 +1,5 @@
 ## 🌐 Azurite-Blob-Razor-Net10-EF
-Exemplo de armazenamento Blob Storage com Emulador Azurite em C# ASP.NET com banco de dados SQL-Server.
+Exemplo de armazenamento Blob Storage com Emulador Azurite em C# ASP.NET Core 10 com banco de dados SQL-Server.
 
 #### 🎨 Aqui está uma demonstração do projeto
 <img width="800" height="350" alt="BlobStorage" src="https://github.com/user-attachments/assets/e0d01e8e-ff82-40b0-90f4-f000b494a7d6" />
