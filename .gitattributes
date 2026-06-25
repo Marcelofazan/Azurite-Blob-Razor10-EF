@@ -1,3 +1,4 @@
-exemploBlobStorage/Scripts/* linguist-language=C#
-exemploBlobStorage/Content/* linguist-language=C#
+exemploBlobAzure/wwwroot/js/* linguist-language=C#
+exemploBlobStorage/wwwroot/css/* linguist-language=C#
+exemploBlobStorage/wwwroot/lib/* linguist-language=C#
 * text=auto
